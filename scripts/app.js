@@ -1,3 +1,5 @@
+import { numberhere } from "./function.js" 
+
 let btn1 = document.getElementById('btn1')
 let btn2 = document.getElementById('btn2')
 let btn3 = document.getElementById('btn3')
@@ -21,6 +23,7 @@ let updatedata
 let page = 1
 let totalPages
 let displayedData
+let currentResultsToShow = 10;
 
 const getpeople = async () => {
     const promise = await fetch('./data/data.json')
@@ -32,11 +35,9 @@ const getpeople = async () => {
     displayResults()
 }
 
-let currentResultsToShow = 10;
-
 function displayResults() {
     infodiv.innerHTML = ''
-
+    
     totalPages = Math.ceil(updatedata.length / currentResultsToShow)
     let startIndex = (page - 1) * currentResultsToShow
     let endIndex = startIndex + currentResultsToShow
@@ -123,7 +124,6 @@ idbtn.addEventListener('click', () => {
     updatedata.sort((a, b) => {
         return a.Id - b.Id
     })
-
     displayResults()
 })
 
@@ -165,6 +165,8 @@ agebtn.addEventListener('click', () => {
 })
 
 getpeople()
+
+numberhere()
 
 //Old function to fill data just to check if my createlelments works
 
