@@ -97,26 +97,36 @@ leftar.addEventListener("click", function () {
 
 btn1.addEventListener('click', () => {
     currentResultsToShow = 10;
+    page = 1
+    pgnum.innerText = page
     displayResults()
 })
 
 btn2.addEventListener('click', () => {
     currentResultsToShow = 20;
+    page = 1
+    pgnum.innerText = page
     displayResults()
 })
 
 btn3.addEventListener('click', () => {
     currentResultsToShow = 30;
+    page = 1
+    pgnum.innerText = page
     displayResults()
 })
 
 btn4.addEventListener('click', () => {
     currentResultsToShow = 40;
+    page = 1
+    pgnum.innerText = page
     displayResults()
 })
 
 btn5.addEventListener('click', () => {
     currentResultsToShow = 50;
+    page = 1
+    pgnum.innerText = page
     displayResults()
 })
 
